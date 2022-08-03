@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { createPortal } from 'react-dom';
 import { Modal1, DivOverlay, Img } from './Modal.styled';
 
-// const modalRoot = document.querySelector('#modal-root');
-
 export class Modal extends Component {
   static propTypes = {
     close: PropTypes.func.isRequired,
