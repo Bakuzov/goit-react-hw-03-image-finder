@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { createPortal } from 'react-dom';
+
 import { Modal1, DivOverlay, Img } from './Modal.styled';
 
 export class Modal extends Component {
