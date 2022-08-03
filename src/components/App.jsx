@@ -22,11 +22,8 @@ export class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.search !== this.state.search && this.state.search !== '') {
-      this.fetchImages();
-      return;
-    }
-    if (prevState.page !== this.state.page && this.state.page !== 1) {
+    const { page, search } = this.state;
+    if (prevState.page !== page || prevState.search !== search) {
       this.fetchImages();
     }
   }

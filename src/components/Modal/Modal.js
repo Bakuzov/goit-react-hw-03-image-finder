@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { createPortal } from 'react-dom';
-// import styles from './Modal.module.css';
+import { Modal1, DivOverlay, Img } from './Modal.styled';
 
-const modalRoot = document.querySelector('#modal-root');
+// const modalRoot = document.querySelector('#modal-root');
 
 export class Modal extends Component {
   static propTypes = {
@@ -32,13 +32,12 @@ export class Modal extends Component {
 
   render() {
     const { largeImageURL, close } = this.props;
-    return createPortal(
-      <div onClick={this.handleClickOnOverlay}>
-        <div>
-          <img src={largeImageURL} alt="краса" onClick={close} />
-        </div>
-      </div>,
-      modalRoot
+    return (
+      <DivOverlay onClick={this.handleClickOnOverlay}>
+        <Modal1>
+          <Img src={largeImageURL} alt="краса" onClick={close} />
+        </Modal1>
+      </DivOverlay>
     );
   }
 }
